@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #7f5200;
+  --color-primary-container: #f9a825;
+  --color-on-primary: #fff0e2;
+  --color-secondary: #b41a1a;
+  --color-on-secondary: #ffefed;
+  --color-surface: #fff5e9;
+  --color-on-surface: #3f2b00;
+  --color-on-surface-variant: #725722;
+  --color-surface-container-low: #ffefd7;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #ffdea5;
+  --color-surface-container-highest: #ffd790;
+  --color-outline-variant: #caa86b;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+}
+
+.glass-effect {
+  @apply backdrop-blur-md bg-surface/80;
+}
+
+.asymmetric-shape {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
